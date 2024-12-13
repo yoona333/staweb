@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STA AI Lab - 影像艺术与人工智能的融合</title>
+    <link rel="stylesheet" href="public/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="public/images/logo1.jpg" alt="STA AI Lab Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#what" class="nav-link">STA</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#ai-tools" class="nav-link">AI Tools</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="video-carousel" class="section">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="video-thumbnail">
+                            <img src="public/images/video1-thumb.jpg" alt="她体内的火山">
+                            <div class="video-title">她体内的火山</div>
+                            <button class="play-button" data-video="https://player.bilibili.com/player.html?isOutside=true&aid=113153144920968&bvid=BV1fftvetES6&cid=25899634540&p=1&autoplay=1&danmaku=0&volume=1">
+                                <span class="play-icon">▶</span>
+                            </button>
+                            <div class="video-player"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="video-thumbnail">
+                            <img src="public/images/video2-thumb.jpg" alt="猫浪流">
+                            <div class="video-title">猫浪流</div>
+                            <button class="play-button" data-video="https://player.bilibili.com/player.html?isOutside=true&aid=113202520199486&bvid=BV1BQxjeYEGx&cid=26012157401&p=1&autoplay=1&danmaku=0&volume=1">
+                                <span class="play-icon">▶</span>
+                            </button>
+                            <div class="video-player"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="video-thumbnail">
+                            <img src="public/images/video3-thumb.jpg" alt="慢热">
+                            <div class="video-title">慢热</div>
+                            <button class="play-button" data-video="https://player.bilibili.com/player.html?isOutside=true&aid=112659408096673&bvid=BV1NigYe9EYd&cid=500001591415601&p=1&autoplay=1&danmaku=0&volume=1">
+                                <span class="play-icon">▶</span>
+                            </button>
+                            <div class="video-player"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="video-thumbnail">
+                            <img src="public/images/video4-thumb.jpg" alt="止涨">
+                            <div class="video-title">止涨</div>
+                            <button class="play-button" data-video="https://player.bilibili.com/player.html?isOutside=true&aid=112659408094770&bvid=BV1KigYe9Eje&cid=500001591413235&p=1&autoplay=1&danmaku=0&volume=1">
+                                <span class="play-icon">▶</span>
+                            </button>
+                            <div class="video-player"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section id="what" class="section">
+            <div class="section-content">
+                <div class="what-container">
+                    <h2>STA</h2>
+                    <div class="what-text">
+                        <h3 class="lab-title">三塔AI研习所（STA AI Lab）</h3>
+                        <p>由香港资深电影人余伟国（Daniel Yu），携手AI影像创作者神思远、AI影像制片人陈俊锋，及数智化组织管理专家陈涛，于2024年8月在云南大理共同创立。STA AI Lab致力于探索生成式人工智能（AIGC）技术在影像内容创作中的应用，集电影制作、出版物版权开发、内容创作和数智化转型服务于一体。</p>
+                        <p>我们的愿景是借助创新的 AIGC 技术，为内容创作领域提供专业的 AI 化咨询及解决方案。激发创作者的艺术创造力、产品表现力和数智技术力，让更多人畅享人工智能时代的技术与人类智慧红利。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section">
+            <div class="section-content">
+                <div class="team-container">
+                    <h2>Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo-container">
+                                <div class="member-photo">
+                                    <img src="public/images/yu.jpg" alt="余伟国（Daniel Yu）">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">
+                                        <span class="hover-trigger">余伟国（Daniel Yu）</span>
+                                        <div class="popup-bio">
+                                            <div class="popup-content">
+                                                <h4>余伟国（Daniel Yu）个人简介</h4>
+                                                <div class="bio-timeline">
+                                                    <p><strong>1990年：</strong>与刘德华共同创立天幕电影公司，制作了《九一神雕侠侣》《香港制造》等影片。</p>
+                                                    <p><strong>2004年：</strong>发起"亚洲新星导"电影计划，推出宁浩的《疯狂的石头》、何宇恒的《太阳雨》、李公乐的《师奶唔易做》等，在亚洲掀起新导演电影浪潮。</p>
+                                                    <p><strong>2005年：</strong>执导电影《再说一次我爱你》，由刘德华主演，获多个国际电影节邀请，在香港票房成绩斐然。</p>
+                                                    <p><strong>2008年：</strong>制作宁浩的《无人区》，该片为2014年柏林国际电影节竞赛影片。</p>
+                                                    <p><strong>2010年：</strong>推出"亚洲新星导"二期计划，推出乌尔善的《刀见笑》，该片在多伦多国际电影节午夜疯狂单元首映。</p>
+                                                    <p><strong>2010年：</strong>与金成洙导演合作，制作李公乐执导、陈坤主演的《跟我的前妻谈恋爱》。</p>
+                                                    <p><strong>2014年：</strong>担任英皇电影制作总监，其制作的电影《暗色天堂》在第35届香港电影金像奖获得最佳男主角和最佳女主角提名，《幸运是我》在第36届香港电影金像奖获得最佳女主角奖。</p>
+                                                    <p><strong>2016年：</strong>加入坏猴子影业，制作《疯狂的外星人》，并推动"72变电影计划"，在中国培养出新一代高票房导演。</p>
+                                                    <p><strong>2023年：</strong>制作由宁浩执导、刘德华主演的《红毯先生》。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <p class="member-title">首席执行官（Chief Executive Officer）</p>
+                                    <div class="member-description">
+                                        <p>香港资深电影人</p>
+                                        <p>与刘德华先生共同创立天幕电影公司</p>
+                                        <p>曾任英皇电影制作总监</p>
+                                        <p>曾任坏猴子影业公司CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo-container">
+                                <div class="member-photo">
+                                    <img src="public/images/shen.jpg" alt="神思远">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">
+                                        <span class="hover-trigger">神思远（Shien Jin）</span>
+                                        <div class="popup-bio">
+                                            <div class="popup-content">
+                                                <h4>神思远个人简介</h4>
+                                                <div class="bio-timeline">
+                                                    <p>影像艺术家，签约三影堂艺术中心，在海内外举办过多次个展，出版《野和少女》、《卑鄙的花》等影像书</p>
+                                                    <p>MV导演，代表作品：《郭源潮》、《折叠故事》</p>
+                                                    <p>以导演身份创作2022阿那亚戏剧节宣传片</p>
+                                                    <p>瑞士巴塞尔博览会展出艺术影片《第二次审问》摄影指导</p>
+                                                    <p>平遥电影节获奖电影《海面上漂过的奖杯》摄影指导</p>
+                                                    <p>曾任《男人装》、《芭莎艺术》等杂志视觉总监，拍摄众多国际杂志封面</p>
+                                                    <p>宇宙锋视觉机构创始人</p>
+                                                    <p>自2023年开始关注研究AI影像并制作AI内容，成为专业AIGCer，短片作品《慢热》获得2024年北京电影节科幻电影之夜"AI实验短片"单元金奖</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <p class="member-title">首席艺术官（Chief Art Officer）</p>
+                                    <div class="member-description">
+                                        <p>AI影像创作者</p>
+                                        <p>资深平面摄影师</p>
+                                        <p>三影堂艺术中心签约艺术家</p>
+                                        <p>艺术视频导演、MV导演</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo-container">
+                                <div class="member-photo">
+                                    <img src="public/images/feng.jpg" alt="陈俊锋">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">
+                                        <span class="hover-trigger">陈俊锋（Wind Chen）</span>
+                                        <div class="popup-bio">
+                                            <div class="popup-content">
+                                                <h4>陈俊锋个人简介</h4>
+                                                <div class="bio-timeline">
+                                                    <p class="bio-item">电影《追爱北京》 导演/制片人</p>
+                                                    
+                                                    <div class="bio-group">
+                                                        <p class="bio-item">话剧</p>
+                                                        <div class="bio-subgroup">
+                                                            <p>《泄密的心》    制片人/出品人    2009年北京国际青年戏剧节、2010年京港沪世博会戏剧展</p>
+                                                            <p>《受诱惑的女人》    制片人    2010年北京国际青年戏剧节</p>
+                                                            <p>《中国的鬼魂》    制片人    2013年北京国际青年戏剧节</p>
+                                                            <p>《杂音》    制片人/副导演    2014年北京国际青年戏剧季、2015年乌镇戏剧节</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="bio-item">艺术视频《回乡——简珮如亚洲计划》 后期总监</p>
+                                                    
+                                                    <p class="bio-item">MV监制、制片人，主要作品《脱焦》、《电子羊》等</p>
+                                                    
+                                                    <p class="bio-item">曾任《男人装》杂志人物总监，制作阿朵、弹的速度等封面大片，开创"镜像电影"</p>
+                                                    
+                                                    <p class="bio-item">宇宙锋视觉机构创始人</p>
+                                                    
+                                                    <div class="bio-group">
+                                                        <p class="bio-item">自2023年起关注探索AI影像技术，以制片人、策划等身份参与多部AI影像作品</p>
+                                                        <p class="bio-continuation">2024年 中国科幻大会科幻电影之夜 "AI实验短片"单元获奖短片《慢热》片</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <p class="member-title">首席运营官—制作部（Chief Operating Officer）</p>
+                                    <div class="member-description">
+                                        <p>AIGC内容制片人</p>
+                                        <p>资深媒体人</p>
+                                        <p>电影制片人、导演、编剧</p>
+                                        <p>戏剧制作人</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo-container">
+                                <div class="member-photo">
+                                    <img src="public/images/tao.jpg" alt="陈涛">
+                                </div>
+                                <div class="member-info">
+                                    <h3 class="member-name">
+                                        <span class="hover-trigger">陈涛（Thomas Chen）</span>
+                                        <div class="popup-bio">
+                                            <div class="popup-content">
+                                                <h4>陈涛个人简介</h4>
+                                                <div class="bio-timeline">
+                                                    <p class="bio-item">AI组织联盟创建者，组织数智化变革实践者</p>
+                                                    
+                                                    <p class="bio-item">管理学博士，提出"元形数智领导力""数智化战略时轮"理论模型。</p>
+                                                    
+                                                    <p class="bio-item">北京立德数智（Leadership with AI & Wisdom）教育信息科技研究院院长</p>
+                                                    
+                                                    <p class="bio-item">曾担任国家行政学院教研处处长，阿里巴巴集团组织战略总监、阿里研究院秘书长、阿里巴巴学委会秘书</p>
+
+                                                    <div class="bio-group">
+                                                        <p class="bio-item">2010年起在政府领导干部培训领域推广思维导图等数字化工具，引入并推广行动学习、结构化研讨以及案例教学等培训方式方法；</p>
+                                                        
+                                                        <p class="bio-item">2018年进入阿里巴巴集团研究和实践数字经济与组织变革，参与阿里巴巴2023年1+6+N组织变革，创建阿里培训学院、数智学堂云学习平台；</p>
+                                                        
+                                                        <p class="bio-item">2022年起关注和推广AIGC技术，宣讲新质生产力、数智领导力、AI+培训创新等主题百余场。</p>
+                                                    </div>
+
+                                                    <p class="bio-item">现为商务部国际贸易经济合作研究院硕士导师，法国里昂商学院客座教授，中国企业人才发展智库研究员，广西行动学习研究会专业顾问研究员。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <p class="member-title">首席运营官—培训部（Chief Operating Officer）</p>
+                                    <div class="member-description">
+                                        <p>教育经济管理学博士</p>
+                                        <p>北京立德数智研究院院长</p>
+                                        <p>曾任国家行政学院教研处处长</p>
+                                        <p>曾任阿里巴巴集团组织战略总监、阿里研究院秘书长</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-tools" class="section">
+            <div class="section-content">
+                <div class="tools-container">
+                    <h2>AI Tools</h2>
+                    <div class="tools-grid">
+                        <!-- 第一行 - 视频工具 -->
+                        <div class="tools-row">
+                            <a href="https://klingai.kuaishou.com/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/kling-logo.png" alt="可灵">
+                                <span class="tool-name">可灵</span>
+                            </a>
+                            <a href="https://jimeng.jianying.com/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/jimeng-logo.png" alt="即梦">
+                                <span class="tool-name">即梦</span>
+                            </a>
+                            <a href="https://hailuoai.com/video" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/hailuo-logo.png" alt="海螺">
+                                <span class="tool-name">海螺</span>
+                            </a>
+                            <a href="https://www.vidu.studio/zh" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/vidu-logo.png" alt="Vidu">
+                                <span class="tool-name">Vidu</span>
+                            </a>
+                        </div>
+                        <!-- 第二行 - AI对话工具 -->
+                        <div class="tools-row">
+                            <a href="https://www.doubao.com/chat/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/doubao-logo.png" alt="豆包">
+                                <span class="tool-name">豆包</span>
+                            </a>
+                            <a href="https://chatglm.cn/main/alltoolsdetail?lang=zh" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/zhipu-logo.png" alt="智谱">
+                                <span class="tool-name">智谱</span>
+                            </a>
+                            <a href="https://kimi.moonshot.cn/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/kimi-logo.png" alt="Kimi">
+                                <span class="tool-name">Kimi</span>
+                            </a>
+                            <a href="https://yiyan.baidu.com/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/wenxin-logo.png" alt="文心一言">
+                                <span class="tool-name">文心一言</span>
+                            </a>
+                            <a href="https://tongyi.aliyun.com/" class="tool-item" target="_blank">
+                                <img src="public/images/aitools/tongyi-logo.png" alt="通义千问">
+                                <span class="tool-name">通义千问</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p>邮箱：STA_AI_LAB@163.com</p>
+                    <!-- 暂时隐藏电话和社交媒体链接
+                    <p>电话：+86 123 4567 8900</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">YouTube</a>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="scroll-indicator"></div>
+
+    <script src="public/script.js"></script>
+</body>
+</html>

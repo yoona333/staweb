@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STA AI Lab</title>
+    <meta http-equiv="refresh" content="5;url=home.html">
+    <style>
+        :root {
+            --brand-orange: #FF4B12; /* 使用与logo相同的橙色 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--brand-orange);
+            cursor: pointer;
+            overflow: hidden; /* 防止页面滚动 */
+        }
+
+        .splash-container {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .logo-white {
+            width: 200px;
+            height: auto;
+            filter: brightness(0) invert(1); /* 将logo转换为白色 */
+            transition: transform 0.3s ease;
+        }
+
+        .splash-container:hover .logo-white {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body onclick="window.location.href='home.html'">
+    <div class="splash-container">
+        <img src="public/images/logo1.jpg" alt="STA AI Lab" class="logo-white">
+    </div>
+
+    <script>
+        // 添加错误处理
+        setTimeout(() => {
+            try {
+                window.location.href = 'home.html';
+            } catch (e) {
+                console.error('跳转失败:', e);
+                // 如果 JavaScript 跳转失败，页面仍会通过 meta refresh 跳转
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

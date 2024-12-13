@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Raleway:wght@300;400;700&family=Poiret+One&display=swap');
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --header-color: #1a1a1a; /* 更暗的导航栏底色 */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000000;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--header-color);
+    color: white;
+    padding: 0.8rem 2rem; /* 稍微减小上下内边距 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* 减小固定高度 */
+}
+
+.logo {
+    /* 移除 margin-right */
+}
+
+.logo img {
+    height: 50px; /* 减小 logo 高度 */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(49%) sepia(84%) saturate(2526%) hue-rotate(340deg) brightness(94%) contrast(90%);
+}
+
+nav {
+    margin-left: auto;
+    flex-grow: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc((100% - 77%) / 2);  /* 与视频窗口右边缘对齐 */
+    align-self: flex-end;
+    padding-bottom: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #FF4B12;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+.carousel {
+    height: auto;
+    background-color: #000000; /* 黑色背景 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding-top: 90px; /* 减小顶部内边距 */
+    margin-bottom: 20px;
+}
+
+.carousel h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.intro, .services {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+.card p {
+    padding: 0 1rem 1rem;
+}
+
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 0.75rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        height: auto; /* 在移动端取消固定高度 */
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .carousel {
+        padding-top: 130px; /* 调整移动端的顶部内边距 */
+    }
+
+    .carousel h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-container {
+        width: 95%; /* 在移动端增加宽度以充分利用空间 */
+    }
+
+    .carousel-item h1 {
+        font-size: 1.5rem; /* 进一步减小移动端的轮播文字大小 */
+    }
+
+    .logo img {
+        height: 40px; /* 在移动端进一步减小 logo 大小 */
+    }
+}
+
+/* 在文件末尾添加以下样式 */
+
+.carousel-container {
+    width: 77%;
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #000;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    width: 33.333%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 2rem; /* 减小轮播文字大小 */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: #FF4B12;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 48px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.carousel-button.prev {
+    left: 20px;
+}
+
+.carousel-button.next {
+    right: 20px;
+}
+
+/* 当视频播放时隐藏按钮 */
+.video-player.active ~ .carousel-button {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #000000;
+    scroll-snap-align: start;
+    position: relative;
+    margin: 0;
+}
+
+.section-content {
+    max-width: 90%;
+    width: 100%;
+    color: white;
+}
+
+/* 设置平滑滚动 */
+html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+}
+
+/* 视频网格布局 */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-item {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.video-item h3 {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* 联系方式样式 */
+.contact-info {
+    flex: 1;
+    margin-left: 0;
+    text-align: left;
+    padding-left: 2rem;
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #e0e0e0;
+}
+
+/* 导航栏样式更新 */
+nav ul li a {
+    color: #FF4B12;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+}
+
+/* What is 部分的样式更新 */
+.what-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+.what-container h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #FF4B12;
+    font-family: 'Orbitron', sans-serif;
+    flex-shrink: 0;
+    width: 120px;
+    line-height: 1;
+}
+
+.what-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+}
+
+.lab-title {
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem 0;
+    color: white;
+    font-weight: 500;
+}
+
+/* 响应式设计更新 */
+@media (max-width: 768px) {
+    .what-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .what-container h2 {
+        font-size: 2.5rem;
+    }
+
+    .what-text {
+        font-size: 1rem;
+    }
+
+    .lab-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Team 部分的样式更新 */
+.team-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+.team-container h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #FF4B12;
+    font-family: 'Orbitron', sans-serif;
+    flex-shrink: 0;
+    width: 120px;
+    line-height: 1;
+}
+
+.team-grid {
+    flex: 1;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.team-member {
+    display: flex;
+    gap: 2rem;
+    color: white;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.member-photo-container {
+    flex: 0 0 100%; /* 修改为占据全部宽度 */
+    display: flex;
+    gap: 2rem;
+}
+
+.member-photo {
+    width: 180px;
+    height: 240px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.member-info {
+    flex: 1;
+    color: white;
+}
+
+.member-name {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: normal;
+    color: white;
+}
+
+.member-title {
+    font-size: 1.3rem;
+    color: #FF4B12;
+    margin: 0 0 1.5rem 0;
+    white-space: nowrap;
+}
+
+.member-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-height: calc(240px - 4.5rem);
+    overflow: hidden;
+}
+
+.member-description p {
+    margin: 0.3rem 0;
+    color: #e0e0e0;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .member-photo {
+        width: 150px;  /* 在较小屏幕上稍微缩小 */
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-photo {
+        width: 120px;  /* 在移动设备上进一步缩小 */
+        height: 160px;
+    }
+    
+    .member-photo-container {
+        flex: 0 0 100%;
+    }
+
+    .member-name {
+        font-size: 1.2rem;
+    }
+    
+    .member-title {
+        font-size: 1.1rem;
+    }
+    
+    .member-description {
+        font-size: 0.9rem;
+    }
+
+    .member-description {
+        max-height: calc(160px - 4rem);
+    }
+}
+
+/* 导航链接样式 */
+.nav-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #FF4B12;
+}
+
+/* Works 部分的网格布局 */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.work-item {
+    width: 100%;
+}
+
+.work-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    height: 0;
+    overflow: hidden;
+}
+
+.work-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 更新导航链接样式 */
+nav ul li a.nav-link {
+    color: #FF4B12;
+    text-decoration: none;
+    font-size: 1.2rem;  /* 增大字体 */
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease;
+    display: inline-block;  /* 使transform生效 */
+}
+
+/* 添加悬停效果 */
+nav ul li a.nav-link:hover {
+    transform: scale(1.1);  /* 放大效果 */
+    animation: bounce 0.5s ease;  /* 添加跳动动画 */
+}
+
+/* 定义跳动动画 */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1.1); }
+    50% { transform: translateY(-3px) scale(1.1); }
+}
+
+/* 调整section的padding-top以修正跳转位置 */
+#what.section {
+    padding-top: 120px;  /* 增加顶部padding */
+    margin-top: -30px;   /* 负margin抵消一部分padding */
+}
+
+#team.section,
+#ai-tools.section,
+#contact.section {
+    padding-top: 120px;  /* 保持一致的间距 */
+    margin-top: -30px;
+}
+
+/* 弹出式简介样式 */
+.hover-trigger {
+    position: relative;
+    cursor: pointer;
+}
+
+.popup-bio {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid #FF4B12;
+    border-radius: 8px;
+    padding: 2rem;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.popup-content {
+    color: white;
+}
+
+.popup-content h4 {
+    color: #FF4B12;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.bio-timeline {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.bio-item {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #FF4B12;
+    text-indent: 0; /* 移除之前的文本缩进 */
+}
+
+.bio-group {
+    margin-bottom: 1rem;
+}
+
+.bio-subgroup {
+    padding-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.bio-subgroup p {
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+    padding-left: 1rem;
+    border-left: none; /* 移除话剧子项的竖杠 */
+}
+
+.bio-continuation {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    border-left: 2px solid #FF4B12;
+}
+
+/* 确保所有简介项都有竖杠 */
+.bio-timeline > p,
+.bio-timeline > div > p {
+    border-left: 2px solid #FF4B12;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* 悬停效果 */
+.hover-trigger:hover + .popup-bio {
+    display: block;
+}
+
+.popup-bio:hover {
+    display: block;
+}
+
+/* 添加背景遮罩 */
+.popup-bio::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .popup-bio {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .popup-content h4 {
+        font-size: 1.2rem;
+    }
+    
+    .bio-timeline {
+        font-size: 0.9rem;
+    }
+}
+
+/* 调整弹出窗口的样式 */
+.popup-bio {
+    padding: 2.5rem;
+}
+
+.popup-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 视频轮播样式 */
+#video-carousel {
+    min-height: auto;
+    padding-top: 140px;
+    padding-bottom: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.carousel-container {
+    width: 77%;
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #000;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #000;
+}
+
+.video-player.active {
+    display: block;
+}
+
+.video-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 修改播放按钮样式 */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;  /* 移除背景色 */
+    border: none;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    opacity: 0.6;  /* 与左右箭头一致的明度 */
+}
+
+.play-button:hover {
+    opacity: 1;  /* 与左右箭头一致的��停效果 */
+}
+
+.play-icon {
+    color: #FF4B12;  /* 橙色 */
+    font-size: 48px;  /* 与左右箭头一致的大小 */
+    margin: 0;  /* 移除左边距 */
+}
+
+/* 修改视频标题样式 */
+.video-title {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    transform: none;
+    text-align: left;
+    color: #FF4B12;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-shadow: none;
+    z-index: 1;
+    padding: 0;
+    transition: opacity 0.3s ease;
+    display: block;
+    pointer-events: none;
+}
+
+/* 当视频播放时隐藏标题 - 增加选择器优先级 */
+.video-thumbnail .video-player.active ~ .video-title,
+.carousel-slide .video-player.active ~ .video-title {
+    opacity: 0;
+    visibility: hidden;
+    display: none;  /* 添加这行以确保完全隐藏 */
+}
+
+/* 移除悬停效果 */
+.video-thumbnail:hover .video-title {
+    transform: none;
+}
+
+/* 添加视频轮播与其他内容的间距 */
+#what.section {
+    margin-top: 70px;
+    min-height: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+    background-color: #000000;
+}
+
+/* 确保其他section也更紧凑 */
+#team.section,
+#ai-tools.section,
+#contact.section {
+    min-height: auto;
+    padding-top: 70px;
+}
+
+/* 修改人员名字的悬停提示样式 */
+.hover-trigger {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.hover-trigger::after {
+    content: "ⓘ";  /* 添加信息图标 */
+    color: #FF4B12;
+    font-size: 0.8em;
+    margin-left: 8px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.hover-trigger:hover::after {
+    opacity: 1;
+}
+
+/* 确保名字和图标在同一行 */
+.member-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* AI Tools 部分样式 */
+.tools-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 0 2rem;
+}
+
+.tools-container h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    margin-top: 2rem;  /* 添加顶部边距使标题下移 */
+    color: #FF4B12;
+    font-family: 'Orbitron', sans-serif;
+    flex-shrink: 0;
+    width: 120px;
+    line-height: 1;
+}
+
+.tools-grid {
+    flex: 1;
+    margin-left: 2rem;
+    margin-top: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid rgba(255, 75, 18, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* 视频工具行 */
+.tools-row:first-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 75, 18, 0.2);
+}
+
+.tools-row:first-child .tool-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* 为Vidu图标单独设置尺寸 */
+.tools-row:first-child .tool-item:last-child img {
+    width: 90px;
+    height: 90px;
+}
+
+/* 其他图标保持原有尺寸 */
+.tools-row:first-child .tool-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.tools-row:first-child .tool-name {
+    display: none;
+}
+
+/* AI对话工具行 */
+.tools-row:last-child {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.tools-row:last-child .tool-item {
+    text-align: center;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tools-row:last-child .tool-item:hover {
+    transform: translateY(-2px);
+}
+
+.tools-row:last-child .tool-item img {
+    display: none;
+}
+
+.tools-row:last-child .tool-name {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* 调整section间距 */
+#ai-tools.section {
+    min-height: auto;
+    padding-top: 70px;
+}
+
+/* 下拉指示器样式 */
+.scroll-indicator {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 60px;
+    z-index: 1000;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    animation: float 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 2px solid #FF4B12;
+    border-bottom: 2px solid #FF4B12;
+    transform: rotate(-45deg);
+    animation: scroll 2s infinite;
+    box-sizing: border-box;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; transform: rotate(-45deg) translate(0, 0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: rotate(-45deg) translate(20px, 20px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+/* 调整内容间距 */
+#what.section {
+    padding-top: 120px;
+    margin-top: -30px;
+}
+
+#team.section,
+#ai-tools.section,
+#contact.section {
+    padding-top: 120px;
+    margin-top: -30px;
+}
+
+/* 修改Contact部分的布局 */
+#contact .section-content {
+    display: flex;
+    align-items: center;
+    max-width: 77%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-content: space-between;
+    transform: translateX(-35px);  /* 从-30px改为-35px，整体再向左移动5px */
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: rgba(0, 255, 0, 0.7);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    width: 120px;
+    margin-left: auto;
+    padding-right: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: -10px;  /* 添加负的左边距使邮箱向左移动10px */
+    text-align: left;
+    padding-left: 2rem;
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #e0e0e0;
+}
